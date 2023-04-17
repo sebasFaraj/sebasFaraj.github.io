@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* Do NOT touch this */
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: 'Poppins';
+}
+
+
+ul
+{
+  text-align: center;
+  list-style-position:inside;
+}
+
+
+/* DO NOT touch this */
+.album-cover {
+  /* The image used */
+  background-image: url("https://i1.wp.com/amschool.org/wp-content/uploads/2016/12/WhatsApp-Image-2022-12-15-at-3.05.33-PM-7.jpeg?fit=1024%2C768&ssl=1");
+  
+  /* url("https://canchageneral.com/wp-content/uploads/2018/03/TWIN-FANTASY.jpg"); */
+
+  height: 100vh;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+/* Don't touch this, esto es insane coding */
+.header-text{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50vw;
+
+  background-color: #b1b1b3b0;
+  padding: 10px;
+
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.footer_text{
+  font-size: 20px;
+}
+
+.card {
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.row {
+  margin: 2vh;
+}
+
+.text 
+{
+  font-size: 25px
+}
+
+.title_text{
+  font-size: 80px;
+  letter-spacing: 2px;
+}
+
+
+.announcement_text{
+  font-size: 40px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+.footer {
+  background-color: rgb(162, 156, 165);
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black
+}
+
+ul {
+  font-size:20px;
+}
+
+i {
+  font-size: 50px;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+.fa-instagram {
+  color: rgb(237, 83, 178);
+}
+
+.fa-facebook {
+  color: blue;
+}
+
+@media only screen and (max-width: 600px)
+{
+  ul {font-size: 13px}
+  a {font-size: 13px}
+  .footer-text{font-size: 14px}
+  .title_text{font-size: 35px}
+  .row{margin:2vh}
+  .text {font-size: 18px}
+  .caption {font-size: 20px}
+  .header-text{width: 80vw}
+}
