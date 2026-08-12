@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coal: #16151a;
+  --color-ink: #1f2430;
+  --color-bone: #f5f2ec;
+  --color-brass: #1e3fae;
+  --color-brass-light: #7ea6e8;
+  --color-fog: #c9cdd3;
+
+  --font-display: "Frank Ruhl Libre", ui-serif, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translate(var(--reveal-x, 0), var(--reveal-y, 0));
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  .reveal-left {
+    --reveal-x: -64px;
+  }
+  .reveal-right {
+    --reveal-x: 64px;
+  }
+  .reveal-up {
+    --reveal-y: 40px;
+  }
+  .reveal-delay-1 {
+    transition-delay: 0.15s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: opacity 0.4s ease;
+    transform: none;
+  }
+}

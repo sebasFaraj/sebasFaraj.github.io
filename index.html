@@ -1,0 +1,1567 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The TEMP Group | Private Wealth Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+<body id="top" class="bg-bone font-sans text-coal antialiased">
+
+  <!-- Section 1: Navbar -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-brass/20 bg-coal/90 backdrop-blur-md">
+    <div class="mx-auto flex h-[72px] max-w-[1600px] items-center justify-between px-6 lg:px-10">
+
+      <!-- Logo / wordmark -->
+      <a href="#top" class="flex items-baseline gap-2">
+        <span class="font-display text-2xl tracking-wide text-bone">Morgan Stanley</span>
+      </a>
+
+      <!-- Primary nav (desktop) -->
+      <nav class="hidden items-center gap-8 lg:flex">
+        <!-- Section 2: Navbar Sub Menu -->
+        <div class="relative">
+          <button
+            type="button"
+            id="about-menu-toggle"
+            aria-expanded="false"
+            aria-controls="about-menu"
+            class="flex items-center gap-1.5 font-mono text-[13px] uppercase tracking-[0.15em] text-fog transition-colors hover:text-bone"
+          >
+            About
+            <svg id="about-menu-chevron" class="h-3 w-3 opacity-70 transition-transform duration-200" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <div
+            id="about-menu"
+            class="absolute left-0 top-full z-50 mt-4 hidden w-72 border border-brass/20 bg-coal py-2 shadow-2xl shadow-coal/40"
+          >
+            <a href="#welcome" class="block px-5 py-3 font-mono text-[12px] uppercase tracking-[0.15em] text-fog transition-colors hover:bg-brass/10 hover:text-bone">Welcome</a>
+            <a href="#meet-the-team" class="block px-5 py-3 font-mono text-[12px] uppercase tracking-[0.15em] text-fog transition-colors hover:bg-brass/10 hover:text-bone">Meet the Team</a>
+            <a href="#awards" class="block px-5 py-3 font-mono text-[12px] uppercase tracking-[0.15em] text-fog transition-colors hover:bg-brass/10 hover:text-bone">View Our Industry Awards</a>
+            <a href="#global-investment-office" class="block px-5 py-3 font-mono text-[12px] uppercase tracking-[0.15em] text-fog transition-colors hover:bg-brass/10 hover:text-bone">Wealth Management Global Investment Office</a>
+            <a href="#services" class="block px-5 py-3 font-mono text-[12px] uppercase tracking-[0.15em] text-fog transition-colors hover:bg-brass/10 hover:text-bone">Thought Leadership</a>
+            <a href="#footer" class="block px-5 py-3 font-mono text-[12px] uppercase tracking-[0.15em] text-fog transition-colors hover:bg-brass/10 hover:text-bone">Location</a>
+          </div>
+        </div>
+
+        <a
+          href="#"
+          data-contact-trigger=""
+          class="font-mono text-[13px] uppercase tracking-[0.15em] text-fog transition-colors hover:text-bone"
+        >
+          Contact Us
+        </a>
+
+        <span class="h-4 w-px bg-brass/25"></span>
+
+        <a
+          href="#"
+          class="flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.15em] text-fog transition-colors hover:text-bone"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="10" cy="6.5" r="3.25" stroke="currentColor" stroke-width="1.3" />
+            <path d="M3.5 17c0-3.59 2.91-6 6.5-6s6.5 2.41 6.5 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+          </svg>
+          Client Login
+        </a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <button
+        type="button"
+        id="mobile-menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle menu"
+        class="flex h-9 w-9 items-center justify-center text-bone lg:hidden"
+      >
+        <svg id="mobile-menu-icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+        <svg id="mobile-menu-icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="hidden max-h-[calc(100vh-72px)] overflow-y-auto border-t border-brass/20 bg-coal lg:hidden">
+      <div class="px-6 py-4">
+        <button
+          type="button"
+          id="mobile-about-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-about-submenu"
+          class="flex w-full items-center justify-between border-b border-brass/10 py-4 font-mono text-[13px] uppercase tracking-[0.15em] text-fog"
+        >
+          About
+          <svg id="mobile-about-chevron" class="h-3 w-3 opacity-70 transition-transform duration-200" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <div id="mobile-about-submenu" class="hidden border-b border-brass/10 pb-2">
+          <a href="#welcome" class="block py-3 pl-4 font-mono text-[12px] uppercase tracking-[0.15em] text-fog/80 transition-colors hover:text-bone">Welcome</a>
+          <a href="#meet-the-team" class="block py-3 pl-4 font-mono text-[12px] uppercase tracking-[0.15em] text-fog/80 transition-colors hover:text-bone">Meet the Team</a>
+          <a href="#awards" class="block py-3 pl-4 font-mono text-[12px] uppercase tracking-[0.15em] text-fog/80 transition-colors hover:text-bone">View Our Industry Awards</a>
+          <a href="#global-investment-office" class="block py-3 pl-4 font-mono text-[12px] uppercase tracking-[0.15em] text-fog/80 transition-colors hover:text-bone">Wealth Management Global Investment Office</a>
+          <a href="#services" class="block py-3 pl-4 font-mono text-[12px] uppercase tracking-[0.15em] text-fog/80 transition-colors hover:text-bone">Thought Leadership</a>
+          <a href="#footer" class="block py-3 pl-4 font-mono text-[12px] uppercase tracking-[0.15em] text-fog/80 transition-colors hover:text-bone">Location</a>
+        </div>
+
+        <a
+          href="#"
+          data-contact-trigger=""
+          class="block border-b border-brass/10 py-4 font-mono text-[13px] uppercase tracking-[0.15em] text-fog transition-colors hover:text-bone"
+        >
+          Contact Us
+        </a>
+
+        <a
+          href="#"
+          class="flex items-center gap-2 py-4 font-mono text-[13px] uppercase tracking-[0.15em] text-fog transition-colors hover:text-bone"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="10" cy="6.5" r="3.25" stroke="currentColor" stroke-width="1.3" />
+            <path d="M3.5 17c0-3.59 2.91-6 6.5-6s6.5 2.41 6.5 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+          </svg>
+          Client Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 3: Header / Hero -->
+  <section id="welcome" class="relative flex min-h-screen w-full scroll-mt-[72px] items-end overflow-hidden">
+    <img
+      src="assets/images/hero-banner.jpg"
+      alt="Glass facade of a modern high-rise, viewed from below"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <!-- Scrim: darkens overall for legibility, deepens toward bottom-left where content sits -->
+    <div class="absolute inset-0 bg-coal/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-coal via-coal/50 to-transparent"></div>
+
+    <!-- Museum-label tag -->
+    <div class="absolute left-6 top-[96px] z-10 border border-brass/40 bg-coal/40 px-3 py-1.5 backdrop-blur-sm lg:left-10">
+      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-brass-light">
+        Miami, FL &middot; Est. 2012
+      </span>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 w-full px-6 pb-20 pt-32 lg:px-10 lg:pb-28">
+      <div class="reveal reveal-up max-w-4xl">
+        <p class="font-mono text-[12px] uppercase tracking-[0.35em] text-brass-light">
+          Private Wealth Management
+        </p>
+
+        <h1 class="mt-4 font-display text-5xl leading-[1.05] text-bone sm:text-6xl lg:text-7xl">
+          The TEMP Group
+        </h1>
+
+        <p class="mt-6 flex flex-wrap gap-x-4 gap-y-2 font-sans text-base text-fog lg:text-lg">
+          <span>Nathaniel Cross</span>
+          <span class="text-brass/60">&middot;</span>
+          <span>Priya Anand</span>
+          <span class="text-brass/60">&middot;</span>
+          <span>Marcus Feld</span>
+          <span class="text-brass/60">&middot;</span>
+          <span>Simone Beaumont</span>
+          <span class="text-brass/60">&middot;</span>
+          <span>Julian Ortiz</span>
+        </p>
+
+        <div class="mt-10 h-px w-12 bg-brass"></div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-8">
+          <p class="font-mono text-sm text-fog">
+            <span class="uppercase tracking-[0.15em] text-brass-light">Direct</span>
+            <span class="ml-3 text-bone">(212) 555-0134</span>
+          </p>
+
+          <button
+            type="button"
+            data-contact-trigger=""
+            class="border border-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass-light transition-colors hover:bg-brass hover:text-bone"
+          >
+            Contact Us
+          </button>
+        </div>
+
+        <a
+          href="#awards"
+          class="mt-6 inline-block font-mono text-[13px] uppercase tracking-[0.15em] text-white/80 underline underline-offset-4 transition-colors hover:text-white"
+        >
+          View Our Industry Awards
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 motion-safe:animate-bounce">
+      <svg class="h-5 w-5 text-brass-light/70" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 7.5L10 13.5L16 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Section 4: Mission Statement — a screen tall (like the header), image left (70%) / statement right (30%) -->
+  <section class="relative w-full bg-bone">
+    <div class="mx-auto grid max-w-[1600px] grid-cols-1 lg:h-screen lg:grid-cols-[7fr_3fr]">
+
+      <div class="reveal reveal-left relative h-[50vh] overflow-hidden border-brass/30 lg:h-full lg:border-r">
+        <img
+          src="assets/images/mission-photo.jpg"
+          alt="Aerial view of a forested coastline and inlet"
+          class="h-full w-full object-cover"
+        />
+      </div>
+
+      <div class="reveal reveal-right reveal-delay-1 flex items-center px-6 py-16 lg:px-12 xl:px-16">
+        <div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-brass">Our Mission</p>
+          <p class="mt-6 font-display text-2xl leading-snug text-coal lg:text-3xl">
+            Delivering our team's experience, resources and service excellence to
+            families, endowments, foundations and corporations across the
+            U.S., Europe and Latin America.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Information Tabs — own screen, centered -->
+  <section class="relative flex min-h-screen w-full items-center justify-center bg-bone px-6 py-24 lg:px-10">
+    <div class="reveal reveal-up mx-auto w-full max-w-4xl">
+      <div class="flex min-h-[460px] flex-col border border-coal/10 bg-white p-8 shadow-2xl shadow-coal/10 lg:min-h-[500px] lg:p-12">
+
+        <!-- Tab bar -->
+        <div class="flex flex-nowrap gap-8 overflow-x-auto border-b border-coal/10" role="tablist">
+          <button
+            type="button"
+            data-tab="story"
+            role="tab"
+            aria-selected="true"
+            class="tab-trigger shrink-0 whitespace-nowrap border-b-2 border-brass pb-4 font-mono text-[13px] uppercase tracking-[0.15em] text-coal"
+          >
+            Our Story
+          </button>
+          <button
+            type="button"
+            data-tab="clients"
+            role="tab"
+            aria-selected="false"
+            class="tab-trigger shrink-0 whitespace-nowrap border-b-2 border-transparent pb-4 font-mono text-[13px] uppercase tracking-[0.15em] text-coal/40 transition-colors hover:text-coal"
+          >
+            Our Clients
+          </button>
+          <button
+            type="button"
+            data-tab="approach"
+            role="tab"
+            aria-selected="false"
+            class="tab-trigger shrink-0 whitespace-nowrap border-b-2 border-transparent pb-4 font-mono text-[13px] uppercase tracking-[0.15em] text-coal/40 transition-colors hover:text-coal"
+          >
+            Our Approach
+          </button>
+        </div>
+
+        <!-- Panels -->
+        <div class="flex-1 pt-8 lg:pt-10">
+          <div data-panel="story" class="tab-panel">
+            <h3 class="font-display text-xl text-coal lg:text-2xl">Because the future is never certain</h3>
+            <p class="mt-4 leading-relaxed text-coal/70">
+              We believe that unnecessary risk is something no one can afford —
+              that's why we help people craft financial plans that are
+              sensible, comprehensive, and research-based. We founded the firm
+              on two inherent beliefs that continue to shape our approach
+              today: we hold ourselves out as your trusted resource, whether
+              you're our client or not, and we always keep your best interests
+              as our only concern.
+            </p>
+            <p class="mt-4 leading-relaxed text-coal/70">
+              We truly work as a team, not just a group of individuals — our
+              experience is vast. We were there for Tech-Wreck 2000, 9/11, the
+              Great Recession of 2008, and helped navigate COVID, emotionally
+              and in the markets. Through each, we've helped multigenerational
+              families, non-profit organizations, and high-profile athletes
+              and entertainers build and maintain the pillars of their
+              financial lives. We want to help you change your life.
+            </p>
+            <p class="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-brass">Services Include</p>
+            <ul class="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-coal/80 sm:grid-cols-2">
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Asset Management</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Financial Planning</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Cash Management &amp; Lending Products</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Alternative Investments</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Fixed Income</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Long-Term Care Insurance</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Business Planning</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Endowments &amp; Foundations</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Retirement Planning</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Education Funding</li>
+              <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Estate Planning Strategies</li>
+            </ul>
+          </div>
+
+          <div data-panel="clients" class="tab-panel hidden">
+            <h3 class="font-display text-xl text-coal lg:text-2xl">We work with people we like</h3>
+            <p class="mt-4 leading-relaxed text-coal/70">
+              That's our rule. It's why our client base represents such a
+              diverse array of executives, families, business owners,
+              nonprofit organizations, professional athletes, and
+              entertainers — good people who value responsible advice, that's
+              who we want in our professional family.
+            </p>
+            <p class="mt-4 leading-relaxed text-coal/70">
+              Some clients are just around the corner from our offices; others
+              are in large U.S. and international cities, or on the road for
+              the majority of the year. Some have been with us for four
+              generations, others for less than one — but no matter how far
+              away you are, or how long you've been our client, we strive to
+              be your ever-present financial resource by keeping our practice
+              intentionally intimate.
+            </p>
+          </div>
+
+          <div data-panel="approach" class="tab-panel hidden">
+            <h3 class="font-display text-xl text-coal lg:text-2xl">A financial plan made for you</h3>
+            <p class="mt-4 leading-relaxed text-coal/70">
+              You deserve a solid financial future, and that starts with a
+              sound financial plan — one that reflects who you are, where you
+              are, and where you want to be 10, 20, or even 50 years down the
+              line. After we've laid your financial foundations, we pause to
+              ask: "What's it all for?"
+            </p>
+            <dl class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div>
+                <dt class="font-mono text-xs uppercase tracking-[0.25em] text-brass">Creating Your Plan</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-coal/70">We understand your unique needs and goals so our team can create a tailored plan, with the guidance and support to help you achieve financial success.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-xs uppercase tracking-[0.25em] text-brass">Adaptable</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-coal/70">The markets and your goals will change, so we adjust your plan to keep you on track.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-xs uppercase tracking-[0.25em] text-brass">Comprehensive</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-coal/70">Our suite of investment products and services is designed to help meet a magnitude of your financial needs.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-xs uppercase tracking-[0.25em] text-brass">Goals Planning System</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-coal/70">An integrated planning platform, built to quickly assess whether you're on track to achieving your financial goals.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Meet the Team -->
+  <section id="meet-the-team" class="relative w-full scroll-mt-[72px] bg-coal px-6 py-20 lg:px-10">
+    <div class="mx-auto max-w-[1600px]">
+      <div class="reveal reveal-up mx-auto max-w-2xl text-center">
+        <p class="font-mono text-xs uppercase tracking-[0.35em] text-brass-light">Meet the Team</p>
+        <h2 class="mt-4 font-display text-3xl text-bone lg:text-4xl">The people behind the plan</h2>
+      </div>
+
+      <div class="reveal reveal-up reveal-delay-1 mt-14">
+        <div class="relative mx-auto max-w-4xl">
+
+          <!-- Pages of two -->
+          <div id="team-slides">
+
+            <!-- Page 1: Leo Biagini, Juan Etinger -->
+            <div class="team-page flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10" data-index="0">
+              <div class="w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]">
+                <div class="overflow-hidden">
+                  <img src="assets/images/team/biagini.jpg" alt="Portrait of Leo Biagini" class="aspect-[4/5] w-[85%] object-cover" />
+                </div>
+                <h3 class="mt-4 font-display text-lg text-bone lg:text-2xl">Leo Biagini</h3>
+                <p class="mt-1 font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-brass-light lg:text-[11px]">Managing Director, Wealth Management</p>
+                <p class="mt-3 font-mono text-[11px] text-fog lg:text-sm">Phone: <span class="text-bone">(212) 271-0460</span></p>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+                  <button type="button" data-contact-trigger="Leo Biagini" class="border border-brass px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone lg:px-6 lg:py-2.5 lg:text-[11px]">Contact Me</button>
+                  <button type="button" data-bio-trigger="leo-biagini" class="font-mono text-[10px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone lg:text-[11px]">View Bio</button>
+                </div>
+              </div>
+
+              <div class="w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]">
+                <div class="overflow-hidden">
+                  <img src="assets/images/team/etinger.jpg" alt="Portrait of Juan Etinger" class="aspect-[4/5] w-[85%] object-cover" />
+                </div>
+                <h3 class="mt-4 font-display text-lg text-bone lg:text-2xl">Juan Etinger</h3>
+                <p class="mt-1 font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-brass-light lg:text-[11px]">Managing Director, Wealth Management</p>
+                <p class="mt-3 font-mono text-[11px] text-fog lg:text-sm">Phone: <span class="text-bone">(212) 271-0389</span></p>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+                  <button type="button" data-contact-trigger="Juan Etinger" class="border border-brass px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone lg:px-6 lg:py-2.5 lg:text-[11px]">Contact Me</button>
+                  <button type="button" data-bio-trigger="juan-etinger" class="font-mono text-[10px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone lg:text-[11px]">View Bio</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Page 2: Victor Palafox, Rodrigo Morales Villarreal -->
+            <div class="team-page hidden flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10" data-index="1">
+              <div class="w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]">
+                <div class="overflow-hidden">
+                  <img src="assets/images/team/palafox.jpg" alt="Portrait of Victor Palafox" class="aspect-[4/5] w-[85%] object-cover" />
+                </div>
+                <h3 class="mt-4 font-display text-lg text-bone lg:text-2xl">Victor Palafox</h3>
+                <p class="mt-1 font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-brass-light lg:text-[11px]">Managing Director, Wealth Management</p>
+                <p class="mt-3 font-mono text-[11px] text-fog lg:text-sm">Phone: <span class="text-bone">(713) 968-3173</span></p>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+                  <button type="button" data-contact-trigger="Victor Palafox" class="border border-brass px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone lg:px-6 lg:py-2.5 lg:text-[11px]">Contact Me</button>
+                  <button type="button" data-bio-trigger="victor-palafox" class="font-mono text-[10px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone lg:text-[11px]">View Bio</button>
+                </div>
+              </div>
+
+              <div class="w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]">
+                <div class="overflow-hidden">
+                  <img src="assets/images/team/villarreal.jpg" alt="Portrait of Rodrigo Morales Villarreal" class="aspect-[4/5] w-[85%] object-cover" />
+                </div>
+                <h3 class="mt-4 font-display text-lg text-bone lg:text-2xl">Rodrigo Morales Villarreal</h3>
+                <p class="mt-1 font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-brass-light lg:text-[11px]">Executive Director, Wealth Management</p>
+                <p class="mt-3 font-mono text-[11px] text-fog lg:text-sm">Phone: <span class="text-bone">(212) 271-0493</span></p>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+                  <button type="button" data-contact-trigger="Rodrigo Morales Villarreal" class="border border-brass px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone lg:px-6 lg:py-2.5 lg:text-[11px]">Contact Me</button>
+                  <button type="button" data-bio-trigger="rodrigo-morales-villarreal" class="font-mono text-[10px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone lg:text-[11px]">View Bio</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Page 3: Ariel Bengio (alone, centered, same card width as paired pages) -->
+            <div class="team-page hidden flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10" data-index="2">
+              <div class="w-[calc(50%-0.75rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]">
+                <div class="overflow-hidden">
+                  <img src="assets/images/team/bengio.jpg" alt="Portrait of Ariel Bengio" class="aspect-[4/5] w-[85%] object-cover" />
+                </div>
+                <h3 class="mt-4 font-display text-lg text-bone lg:text-2xl">Ariel Bengio</h3>
+                <p class="mt-1 font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-brass-light lg:text-[11px]">Senior Vice President, Wealth Management</p>
+                <p class="mt-3 font-mono text-[11px] text-fog lg:text-sm">Phone: <span class="text-bone">(212) 271-0693</span></p>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+                  <button type="button" data-contact-trigger="Ariel Bengio" class="border border-brass px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone lg:px-6 lg:py-2.5 lg:text-[11px]">Contact Me</button>
+                  <button type="button" data-bio-trigger="ariel-bengio" class="font-mono text-[10px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone lg:text-[11px]">View Bio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel controls -->
+          <div class="mt-10 flex items-center justify-center gap-6">
+            <button
+              type="button"
+              id="team-prev"
+              aria-label="Previous team members"
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brass/40 text-brass-light transition-colors hover:border-brass hover:bg-brass hover:text-bone"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M12.5 4.5L6 11l6.5 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div id="team-dots" class="flex items-center gap-2">
+              <button type="button" class="team-dot h-1.5 w-1.5 rounded-full bg-brass transition-colors" data-index="0" aria-label="View team members 1 and 2"></button>
+              <button type="button" class="team-dot h-1.5 w-1.5 rounded-full bg-bone/20 transition-colors" data-index="1" aria-label="View team members 3 and 4"></button>
+              <button type="button" class="team-dot h-1.5 w-1.5 rounded-full bg-bone/20 transition-colors" data-index="2" aria-label="View team member 5"></button>
+            </div>
+
+            <button
+              type="button"
+              id="team-next"
+              aria-label="Next team members"
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brass/40 text-brass-light transition-colors hover:border-brass hover:bg-brass hover:text-bone"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M7.5 4.5L14 11l-6.5 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mt-12 flex justify-center">
+            <button
+              type="button"
+              id="team-view-all"
+              class="border border-brass/50 px-8 py-3 font-mono text-[12px] uppercase tracking-[0.2em] text-brass-light transition-colors hover:bg-brass hover:text-bone"
+            >
+              View All
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Awards and Recognition -->
+  <section id="awards" class="relative w-full scroll-mt-[72px] bg-bone px-6 py-24 lg:px-10">
+    <div class="mx-auto max-w-4xl">
+      <div class="reveal reveal-up text-center">
+        <p class="font-mono text-xs uppercase tracking-[0.35em] text-brass">Recognition</p>
+        <h2 class="mt-4 font-display text-3xl text-coal lg:text-4xl">Awards and Recognition</h2>
+      </div>
+
+      <div class="reveal reveal-up reveal-delay-1 mt-14">
+        <div class="relative mx-auto max-w-2xl">
+
+          <div id="award-slides">
+            <div class="award-slide flex flex-col gap-6 border border-coal/10 bg-white p-8 shadow-2xl shadow-coal/10 sm:flex-row sm:items-center lg:p-12" data-index="0">
+              <div class="flex h-20 w-20 shrink-0 items-center justify-center border border-brass/30">
+                <span class="font-display text-sm text-brass">Forbes</span>
+              </div>
+              <div>
+                <h3 class="font-display text-xl text-coal lg:text-2xl">Forbes Best-In-State Wealth Management Teams</h3>
+                <p class="mt-2 font-mono text-xs uppercase tracking-[0.15em] text-brass">2025 &amp; 2026</p>
+                <p class="mt-4 text-sm leading-relaxed text-coal/60">
+                  Source: Forbes.com (Awarded Jan 2025; Jan 2026). Data compiled by SHOOK Research LLC
+                  based on a 12-month time period concluding in March of the year prior to the issuance
+                  of the award. Ranking based on an algorithm of qualitative criteria, mostly gained
+                  through telephone and in-person due diligence interviews, and quantitative data.
+                </p>
+              </div>
+            </div>
+
+            <div class="award-slide hidden flex-col gap-6 border border-coal/10 bg-white p-8 shadow-2xl shadow-coal/10 sm:flex-row sm:items-center lg:p-12" data-index="1">
+              <div class="flex h-20 w-20 shrink-0 items-center justify-center border border-brass/30">
+                <span class="font-display text-sm text-brass">Forbes</span>
+              </div>
+              <div>
+                <h3 class="font-display text-xl text-coal lg:text-2xl">America's Top Wealth Management Teams</h3>
+                <p class="mt-2 font-mono text-xs uppercase tracking-[0.15em] text-brass">2024 &amp; 2025</p>
+                <p class="mt-4 text-sm leading-relaxed text-coal/60">
+                  Source: Forbes.com (Awarded 2024, 2025). Data compiled by SHOOK Research LLC based
+                  on in-person and telephone due diligence and quantitative criteria. Neither Forbes
+                  nor SHOOK receive compensation in exchange for placement on the ranking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex items-center justify-center gap-6">
+            <button
+              type="button"
+              id="award-prev"
+              aria-label="Previous award"
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-coal/15 text-coal/50 transition-colors hover:border-brass hover:text-brass"
+            >
+              <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M12.5 4.5L6 11l6.5 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-coal/50">
+              Viewing <span id="award-current">1</span> of <span id="award-total">2</span>
+            </p>
+
+            <button
+              type="button"
+              id="award-next"
+              aria-label="Next award"
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-coal/15 text-coal/50 transition-colors hover:border-brass hover:text-brass"
+            >
+              <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M7.5 4.5L14 11l-6.5 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Blue Banner — Global Investment Office, modeled on the Alta Group site -->
+  <section id="global-investment-office" class="relative w-full scroll-mt-[72px] px-6 py-20 lg:px-10 lg:py-24" style="background-color: #002c51;">
+    <div class="reveal reveal-up mx-auto max-w-2xl text-center">
+      <p class="font-mono text-sm uppercase tracking-[0.2em] text-white">Wealth Management</p>
+      <p class="mt-1 font-mono text-sm uppercase tracking-[0.2em] text-white">Global Investment Office</p>
+
+      <p class="mt-10 font-display text-3xl text-white/90 lg:text-4xl">Portfolio Insights</p>
+
+      <div class="mt-10">
+        <button
+          type="button"
+          class="rounded-full border border-white px-9 py-3 font-sans text-[15px] font-semibold text-white transition-colors hover:bg-white hover:text-[#002c51]"
+        >
+          Read More
+        </button>
+      </div>
+
+      <a href="#" class="mt-6 inline-block font-sans text-[15px] text-white underline underline-offset-4">
+        Read "On the Markets"
+      </a>
+    </div>
+  </section>
+
+  <!-- Section 9: Our Services -->
+  <section id="services" class="relative w-full scroll-mt-[72px] bg-bone px-6 py-24 lg:px-10">
+    <div class="mx-auto max-w-6xl">
+      <!-- Equity Compensation -->
+      <div class="reveal reveal-up reveal-delay-1 mt-16 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div class="order-2 lg:order-1">
+          <h3 class="font-display text-2xl text-coal lg:text-3xl">Equity Compensation</h3>
+          <p class="mt-4 leading-relaxed text-coal/70">
+            Helping you make the most of your equity awards and better understand how it
+            may fit into your larger financial picture — today and tomorrow.
+          </p>
+          <ul class="mt-6 grid grid-cols-2 gap-x-6 gap-y-2 text-coal/80">
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Vesting Events</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Option Expirations</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Restricted Stock Units</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Tax Implications</li>
+          </ul>
+          <button
+            type="button"
+            class="mt-8 border border-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-bone"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <div class="order-1 overflow-hidden border border-coal/10 lg:order-2">
+          <video class="aspect-video w-full bg-coal object-cover" poster="https://dynl.mktgcdn.com/p/aACPXxffYpIkmCwzWf61PzAKfGPK6wYTkGJM7wT9YPM/1022x570.png" controls preload="metadata">
+            <source src="assets/videos/equity-compensation.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- Private Wealth Management Podcast -->
+      <div class="reveal reveal-up mt-16 grid grid-cols-1 items-center gap-10 border-t border-coal/10 pt-16 lg:grid-cols-2 lg:gap-16 lg:pt-20">
+        <div class="overflow-hidden border border-coal/10">
+          <img
+            src="https://dynl.mktgcdn.com/p/dqGwjNn1uJkAYGFO2ImVussPlVSzTnH1CXowjfj3AWw/410x410.jpg"
+            alt="Private Wealth Management Podcast"
+            class="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl text-coal lg:text-3xl">Private Wealth Management Podcast</h3>
+          <p class="mt-4 leading-relaxed text-coal/70">
+            Bringing you engaging stories and key insights surrounding the complexities
+            associated with significant wealth, including:
+          </p>
+          <ul class="mt-6 grid grid-cols-1 gap-x-6 gap-y-2 text-coal/80 sm:grid-cols-2">
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Intergenerational Planning</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Philanthropic Giving</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Non-Traditional Assets</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Managing Family Wealth</li>
+          </ul>
+          <button
+            type="button"
+            class="mt-8 border border-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-bone"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Managing Significant Wealth -->
+      <div class="reveal reveal-up mt-16 grid grid-cols-1 items-center gap-10 border-t border-coal/10 pt-16 lg:grid-cols-2 lg:gap-16 lg:pt-20">
+        <div class="order-2 lg:order-1">
+          <h3 class="font-display text-2xl text-coal lg:text-3xl">Managing Significant Wealth</h3>
+          <ul class="mt-6 grid grid-cols-1 gap-x-6 gap-y-2 text-coal/80 sm:grid-cols-2">
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Investment Management</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Wealth Transfer &amp; Philanthropy</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Cash Management &amp; Lending</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Family Governance &amp; Wealth Education</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Lifestyle Advisory</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Business Services</li>
+          </ul>
+          <button
+            type="button"
+            class="mt-8 border border-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-bone"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <div class="order-1 overflow-hidden border border-coal/10 lg:order-2">
+          <img
+            src="https://dynl.mktgcdn.com/p/F3-ZdXAgZLmS--k22IqniwdlgnYvHqiq3RAkUpvNG3Q/619x619.jpg"
+            alt="Managing Significant Wealth"
+            class="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Insights and Outcomes -->
+      <div class="reveal reveal-up mt-16 grid grid-cols-1 items-center gap-10 border-t border-coal/10 pt-16 lg:grid-cols-2 lg:gap-16 lg:pt-20">
+        <div class="overflow-hidden border border-coal/10">
+          <img
+            src="https://dynl.mktgcdn.com/p/LzQfHQHZ4Hq8OuHGdCweGNADAZqRq_cQ8lfyqqht_qU/619x619.jpg"
+            alt="Insights and Outcomes"
+            class="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl text-coal lg:text-3xl">Insights and Outcomes</h3>
+          <p class="mt-4 leading-relaxed text-coal/70">
+            Thought Leadership for our ultra high net worth clients, which contains
+            thought-provoking articles, authored by leading experts from Morgan Stanley
+            Family Office Resources.
+          </p>
+          <button
+            type="button"
+            class="mt-8 border border-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-bone"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Wealth Management for Athletes and Entertainers -->
+      <div class="reveal reveal-up mt-16 grid grid-cols-1 items-center gap-10 border-t border-coal/10 pt-16 lg:grid-cols-2 lg:gap-16 lg:pt-20">
+        <div class="order-2 lg:order-1">
+          <h3 class="font-display text-2xl text-coal lg:text-3xl">Wealth Management for Athletes and Entertainers</h3>
+          <p class="mt-4 leading-relaxed text-coal/70">
+            Understanding the unique financial challenges of athletes and entertainers and
+            how they differ from one profession to the next, we deliver the experience and
+            resources you need to help create and implement a comprehensive, multigenerational
+            wealth management plan based on your needs, values and aspirations.
+          </p>
+          <ul class="mt-6 grid grid-cols-1 gap-x-6 gap-y-2 text-coal/80 sm:grid-cols-2">
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Investment Management</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Wealth Transfer &amp; Philanthropy</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Private Banking Solutions</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Family Governance &amp; Wealth Education</li>
+            <li class="flex items-center gap-2"><span class="h-1 w-1 bg-brass"></span>Lifestyle Advisory</li>
+          </ul>
+          <button
+            type="button"
+            class="mt-8 border border-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-bone"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <div class="order-1 overflow-hidden border border-coal/10 lg:order-2">
+          <img
+            src="https://dynl.mktgcdn.com/p/IA5PfpBNfllwbsMZI8MeiEoO08jl3sn5I1EP9hP6N3A/619x619.jpg"
+            alt="Wealth Management for Athletes and Entertainers"
+            class="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: Contact Us CTA -->
+  <section class="relative w-full border-y border-coal/10 bg-white px-6 py-20 lg:px-10">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="reveal reveal-up text-lg leading-relaxed text-coal/80 lg:text-xl">
+        We look forward to discussing your needs and goals, and the exceptional resources we can place at your disposal.
+      </p>
+      <button
+        type="button"
+        data-contact-trigger=""
+        class="reveal reveal-up reveal-delay-1 mt-8 border border-brass px-9 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-bone"
+      >
+        Contact Us
+      </button>
+    </div>
+  </section>
+
+  <!-- Section 11: Disclosures -->
+  <section class="relative w-full bg-white px-6 pb-16 pt-4 lg:px-10">
+    <div class="mx-auto max-w-4xl space-y-6 text-xs leading-relaxed text-coal/60 lg:text-[13px]">
+      <div>
+        <p><sup>1</sup>Morgan Stanley Smith Barney LLC and its affiliates and their employees (including Financial Advisors and Private Wealth Advisors) are not in the business of providing tax or legal advice. These materials and any statements contained herein should not be construed as tax or legal advice. Individuals should consult their personal tax advisor or attorney for matters involving taxation and tax planning and their attorney for matters involving personal trusts and estate planning.</p>
+        <a href="#top" class="mt-2 inline-block underline underline-offset-2 transition-colors hover:text-coal">Back to top</a>
+      </div>
+
+      <div>
+        <p><sup>2</sup>Asset Allocation does not assure a profit or protect against loss in declining financial markets.</p>
+        <a href="#top" class="mt-2 inline-block underline underline-offset-2 transition-colors hover:text-coal">Back to top</a>
+      </div>
+
+      <div>
+        <p><sup>3</sup>Morgan Stanley Smith Barney LLC (the &ldquo;Firm&rdquo;) and its affiliates do not currently offer the services provided by this Service Provider(s). The Service Provider(s) is not an affiliate of the Firm. Any review of the Service Provider(s) performed by the Firm was based on information from sources that we believe are reliable but we cannot guarantee its accuracy or completeness. This referral should in no way be considered to be a solicitation by the Firm for business on behalf of the Service Provider(s). The Firm makes no representations regarding the appropriate or otherwise of the products or services provided by the Service Provider(s). There may be additional service providers for comparative purposes. If you choose to contact the Service Provider(s), do thorough due diligence, and make your own independent decision.</p>
+        <a href="#top" class="mt-2 inline-block underline underline-offset-2 transition-colors hover:text-coal">Back to top</a>
+      </div>
+
+      <div class="space-y-4">
+        <p><sup>4</sup>Borrowing against securities may not be appropriate for everyone. You should be aware that there are risks associated with a securities based loan, including possible maintenance calls on short notice, and that market conditions can magnify any potential for loss. For details please see the important disclosures below.</p>
+        <p>Securities based loans are provided by Morgan Stanley Smith Barney LLC, Morgan Stanley Private Bank, National Association or Morgan Stanley Bank, N.A, as applicable.</p>
+        <p>Important Risk Information for Securities Based Lending: You need to understand that: (1) Sufficient collateral must be maintained to support your loan(s) and to take future advances; (2) You may have to deposit additional cash or eligible securities on short notice; (3) Some or all of your securities may be sold without prior notice in order to maintain account equity at required maintenance levels. You will not be entitled to choose the securities that will be sold. These actions may interrupt your long-term investment strategy and may result in adverse tax consequences or in additional fees being assessed; (4) Morgan Stanley Bank, N.A., Morgan Stanley Private Bank, National Association or Morgan Stanley Smith Barney LLC (collectively referred to as &ldquo;Morgan Stanley&rdquo;) reserves the right not to fund any advance request due to insufficient collateral or for any other reason except for any portion of a securities based loan that is identified as a committed facility; (5) Morgan Stanley reserves the right to increase your collateral maintenance requirements at any time without notice; and (6) Morgan Stanley reserves the right to call securities based loans at any time and for any reason.</p>
+        <p>With the exception of a margin loan, the proceeds from securities based loan products may not be used to purchase, trade, or carry margin stock (or securities, with respect to Express CreditLine); repay margin debt that was used to purchase, trade or carry margin stock (or securities, with respect to Express CreditLine); and cannot be deposited into a Morgan Stanley Smith Barney LLC or other brokerage account.</p>
+        <p>To be eligible for a securities based loan, a client must have a brokerage account at Morgan Stanley Smith Barney LLC that contains eligible securities, which shall serve as collateral for the securities based loan.</p>
+        <a href="#top" class="mt-2 inline-block underline underline-offset-2 transition-colors hover:text-coal">Back to top</a>
+      </div>
+
+      <p>Certified Financial Planner Board of Standards Center for Financial Planning, Inc. owns and licenses the certification marks CFP&reg;, CERTIFIED FINANCIAL PLANNER&reg;, and CFP&reg; (with plaque design) in the United States to Certified Financial Planner Board of Standards, Inc., which authorizes individuals who successfully complete the organization's initial and ongoing certification requirements to use the certification marks.</p>
+
+      <p>Morgan Stanley Smith Barney LLC does not accept appointments nor will it act as a trustee but it will provide access to trust services through an appropriate third-party corporate trustee.</p>
+
+      <p>Asset Allocation does not assure a profit or protect against loss in declining financial markets.</p>
+
+      <p>The securities/instruments, investments and investment strategies discussed on this website may not be suitable for all investors. The appropriateness of a particular investment or investment strategy will depend on an investor's individual circumstances and objectives. The views and opinions expressed on this website may not necessarily reflect those of Morgan Stanley Smith Barney LLC (&ldquo;Morgan Stanley&rdquo;). This website and its associated content are intended for U.S. residents only.</p>
+
+      <p>Morgan Stanley and its Private Wealth Advisors do not provide tax or legal advice. Visitors to this website should consult their tax advisor for matters involving taxation and tax planning and their attorney for matters involving trust and estate planning and other legal matters.</p>
+
+      <p>Morgan Stanley Private Wealth Advisers may only transact business in states where they are registered or excluded or exempted from registration. Transacting business, follow-up and individualized responses involving either effecting or attempting to effect transactions in securities, or the rendering of personalized investment advice for compensation, will not be made to persons in states where Morgan Stanley Private Wealth Advisers are not registered or excluded or exempt from registration.</p>
+
+      <p>For more information, please see the Morgan Stanley Smith Barney LLC Client Relationship Summary.</p>
+
+      <p>See the Financial Advisors Biographies for Registration and Licensing information.</p>
+
+      <p>Certified Financial Planner Board of Standards Center for Financial Planning, Inc. owns and licenses the certification marks CFP&reg;, CERTIFIED FINANCIAL PLANNER&reg;, and CFP&reg; (with plaque design) in the United States to Certified Financial Planner Board of Standards, Inc., which authorizes individuals who successfully complete the organization's initial and ongoing certification requirements to use the certification marks.</p>
+
+      <p>Investment Management Consultants Association, Inc. owns the marks CIMA&reg;, Certified Investment Management Analyst&reg; (with graph element)&reg;, and Certified Investment Management Analyst&reg; .</p>
+
+      <p>Morgan Stanley Smith Barney LLC offers insurance products in conjunction with its licensed insurance agency affiliates.</p>
+
+      <p>Life insurance, disability income insurance, and long-term care insurance are offered through Morgan Stanley Smith Barney LLC's licensed insurance agency affiliates.</p>
+
+      <p>Lifestyle Advisory Services: Products and services are provided by third party service providers, not Morgan Stanley Smith Barney LLC (&ldquo;Morgan Stanley&rdquo;). Morgan Stanley may not receive a referral fee or have any input concerning such products or services. There may be additional service providers for comparative purposes. Please perform a thorough due diligence and make your own independent decision.</p>
+
+      <p>Private Bankers are employees of Morgan Stanley Private Bank, National Association.</p>
+
+      <p>Morgan Stanley Smith Barney LLC is a registered Broker/Dealer, Member SIPC, and not a bank. Where appropriate, Morgan Stanley Smith Barney LLC has entered into arrangements with banks and other third parties to assist in offering certain banking related products and services.</p>
+
+      <p class="font-semibold text-coal/80">Investment, insurance and annuity products offered through Morgan Stanley Smith Barney LLC are: NOT FDIC INSURED | MAY LOSE VALUE | NOT BANK GUARANTEED | NOT A BANK DEPOSIT | NOT INSURED BY ANY FEDERAL GOVERNMENT AGENCY</p>
+
+      <p><a href="https://www.morganstanley.com/disclosures/" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-coal">Awards Disclosures | Morgan Stanley</a></p>
+
+      <p>CRC 4677197 (7/2025)</p>
+    </div>
+  </section>
+
+  <!-- Section 12: Footer and Socials -->
+  <footer id="footer" class="relative w-full scroll-mt-[72px] bg-coal px-6 py-16 lg:px-10">
+    <div class="mx-auto max-w-[1600px]">
+      <ul class="flex items-center justify-center gap-4">
+        <li>
+          <a
+            href="https://twitter.com/morganstanley"
+            target="_blank"
+            rel="noopener"
+            aria-label="X (Twitter)"
+            class="flex h-9 w-9 items-center justify-center border border-brass/30 text-fog transition-colors hover:border-brass hover:text-bone"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/company/morgan-stanley"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="flex h-9 w-9 items-center justify-center border border-brass/30 text-fog transition-colors hover:border-brass hover:text-bone"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/user/mgstnly"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+            class="flex h-9 w-9 items-center justify-center border border-brass/30 text-fog transition-colors hover:border-brass hover:text-bone"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.26 31.26 0 0 0 0 12a31.26 31.26 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.26 31.26 0 0 0 24 12a31.26 31.26 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <hr class="mt-10 border-brass/20" />
+
+      <ul class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 font-mono text-[12px] uppercase tracking-[0.1em] text-fog">
+        <li><button type="button" class="transition-colors hover:text-bone">Glossary</button></li>
+        <li><a href="https://ms.com" target="_blank" rel="noopener" class="transition-colors hover:text-bone">MS.com</a></li>
+        <li><a href="https://www.morganstanley.com/disclosures/" target="_blank" rel="noopener" class="transition-colors hover:text-bone">Disclosures</a></li>
+        <li><a href="https://www.morganstanley.com/about-us-ir/index.html" target="_blank" rel="noopener" class="transition-colors hover:text-bone">Investor Relations</a></li>
+        <li><a href="https://www.morganstanley.com/about-us-governance/index.html" target="_blank" rel="noopener" class="transition-colors hover:text-bone">Corporate Governance</a></li>
+        <li><a href="http://www.morganstanley.com/about-us-newsroom" target="_blank" rel="noopener" class="transition-colors hover:text-bone">Newsroom</a></li>
+        <li><a href="https://www.morganstanley.com/about/careers/" target="_blank" rel="noopener" class="transition-colors hover:text-bone">Careers</a></li>
+      </ul>
+
+      <hr class="mt-8 border-brass/20" />
+
+      <ul class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[12px] text-fog">
+        <li><a href="https://www.morganstanley.com/disclosures/" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-bone">Disclosures</a></li>
+        <li><a href="https://www.morganstanley.com/privacy-pledge.html" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-bone">Privacy &amp; Cookies</a></li>
+        <li><a href="https://www.morganstanley.com/terms.html" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-bone">Terms of Use</a></li>
+        <li><a href="https://www.morganstanley.com/contact-us" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-bone">Contact Us</a></li>
+        <li><a href="https://www.morganstanley.com/about-us/global-offices/" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-bone">Global Offices</a></li>
+        <li><a href="http://www.morganstanley.com/people-opportunities/eeo.html" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-bone">Equal Employment Opportunity</a></li>
+        <li><a href="#" class="underline underline-offset-2 transition-colors hover:text-bone">Your Privacy Choices</a></li>
+      </ul>
+
+      <div class="mt-10 text-center font-mono text-[11px] leading-relaxed text-fog/70">
+        <p>
+          &copy; 2026 Morgan Stanley Private Wealth Management, is a division of Morgan Stanley Smith Barney LLC. Member
+          <a href="https://www.sipc.org" target="_blank" rel="noopener" class="underline hover:text-fog">SIPC</a>. CRC#6295606&nbsp;&nbsp;02/2024
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-coal/70 px-6 py-10 backdrop-blur-sm">
+    <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto bg-white shadow-2xl">
+      <button
+        type="button"
+        id="contact-modal-close"
+        aria-label="Close contact form"
+        class="absolute right-5 top-5 z-10 flex h-8 w-8 items-center justify-center bg-white/80 text-coal/40 transition-colors hover:text-coal"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4.5 4.5l11 11M15.5 4.5l-11 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <img
+        src="assets/images/mission-photo.jpg"
+        alt="Aerial view of a forested coastline and inlet"
+        class="h-40 w-full object-cover"
+      />
+
+      <div class="p-8 lg:p-10">
+        <p class="font-mono text-xs uppercase tracking-[0.35em] text-brass">Contact Us</p>
+        <h3 class="mt-3 font-display text-2xl text-coal">Contact TEMP Group</h3>
+        <p class="mt-2 text-xs text-coal/40">* Required Fields</p>
+
+        <form id="contact-form" class="mt-8 space-y-6">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.15em] text-coal/70">Your Name*</p>
+            <div class="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <input type="text" placeholder="First Name" required class="w-full border border-coal/15 bg-transparent px-4 py-3 text-sm text-coal outline-none transition-colors focus:border-brass" />
+              <input type="text" placeholder="Last Name" required class="w-full border border-coal/15 bg-transparent px-4 py-3 text-sm text-coal outline-none transition-colors focus:border-brass" />
+            </div>
+          </div>
+
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.15em] text-coal/70">How can we contact you?*</p>
+            <div class="mt-2 space-y-3">
+              <input type="email" placeholder="Email" required class="w-full border border-coal/15 bg-transparent px-4 py-3 text-sm text-coal outline-none transition-colors focus:border-brass" />
+              <input type="tel" placeholder="Work Phone (optional)" class="w-full border border-coal/15 bg-transparent px-4 py-3 text-sm text-coal outline-none transition-colors focus:border-brass" />
+              <input type="tel" placeholder="Personal Phone (optional)" class="w-full border border-coal/15 bg-transparent px-4 py-3 text-sm text-coal outline-none transition-colors focus:border-brass" />
+            </div>
+          </div>
+
+          <div>
+            <label for="contact-state" class="font-mono text-[11px] uppercase tracking-[0.15em] text-coal/70">State of Residence*</label>
+            <select id="contact-state" required class="mt-2 w-full border border-coal/15 bg-transparent px-4 py-3 text-sm text-coal outline-none transition-colors focus:border-brass">
+              <option value="">Select State</option>
+              <option>Alabama</option>
+              <option>Alaska</option>
+              <option>Arizona</option>
+              <option>Arkansas</option>
+              <option>California</option>
+              <option>Colorado</option>
+              <option>Connecticut</option>
+              <option>Delaware</option>
+              <option>Florida</option>
+              <option>Georgia</option>
+              <option>Hawaii</option>
+              <option>Idaho</option>
+              <option>Illinois</option>
+              <option>Indiana</option>
+              <option>Iowa</option>
+              <option>Kansas</option>
+              <option>Kentucky</option>
+              <option>Louisiana</option>
+              <option>Maine</option>
+              <option>Maryland</option>
+              <option>Massachusetts</option>
+              <option>Michigan</option>
+              <option>Minnesota</option>
+              <option>Mississippi</option>
+              <option>Missouri</option>
+              <option>Montana</option>
+              <option>Nebraska</option>
+              <option>Nevada</option>
+              <option>New Hampshire</option>
+              <option>New Jersey</option>
+              <option>New Mexico</option>
+              <option>New York</option>
+              <option>North Carolina</option>
+              <option>North Dakota</option>
+              <option>Ohio</option>
+              <option>Oklahoma</option>
+              <option>Oregon</option>
+              <option>Pennsylvania</option>
+              <option>Rhode Island</option>
+              <option>South Carolina</option>
+              <option>South Dakota</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Utah</option>
+              <option>Vermont</option>
+              <option>Virginia</option>
+              <option>Washington</option>
+              <option>West Virginia</option>
+              <option>Wisconsin</option>
+              <option>Wyoming</option>
+              <option>District of Columbia</option>
+              <option>Puerto Rico</option>
+              <option>US Virgin Islands</option>
+            </select>
+            <p class="mt-2 text-xs italic text-coal/40">Available to U.S. Residents only</p>
+          </div>
+
+          <div class="border-t border-coal/10 pt-5">
+            <button
+              type="button"
+              id="investment-needs-toggle"
+              aria-expanded="false"
+              aria-controls="investment-needs-panel"
+              class="flex w-full items-center justify-between font-mono text-[11px] uppercase tracking-[0.15em] text-coal"
+            >
+              Investment Needs
+              <svg id="investment-needs-chevron" class="h-3 w-3 text-coal/50 transition-transform duration-200" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="investment-needs-panel" class="hidden mt-4 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2">
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Charitable Giving</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Equity Compensation</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Estate Planning Strategies</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Family Wealth Management</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />General Investment Advice</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Global Sports and Entertainment</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Help with Special Needs or Disabilities</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Institution, Government Entity, Foundation or Endowment</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Internationally Based Investor / Family</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Investing With Impact</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />LGBT+ Financial Planning</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Liability Management</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Navigating Divorce Finances</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Pre-Liquidity Event</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Retirement Planning</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Tax Planning Strategies</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Ultra High Net Worth Investing</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="checkbox" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Wealth Transfer Planning / Inheritance</label>
+            </div>
+          </div>
+
+          <div class="border-t border-coal/10 pt-5">
+            <button
+              type="button"
+              id="household-assets-toggle"
+              aria-expanded="false"
+              aria-controls="household-assets-panel"
+              class="flex w-full items-center justify-between font-mono text-[11px] uppercase tracking-[0.15em] text-coal"
+            >
+              Household Assets
+              <svg id="household-assets-chevron" class="h-3 w-3 text-coal/50 transition-transform duration-200" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="household-assets-panel" class="hidden mt-4 space-y-3">
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="radio" name="household-assets" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Above $5 million</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="radio" name="household-assets" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Above $10 million</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="radio" name="household-assets" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Above $30 million</label>
+              <label class="flex items-center gap-2 text-sm text-coal/70"><input type="radio" name="household-assets" class="h-4 w-4 border-coal/30 text-brass focus:ring-brass" />Above $50 million</label>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full border border-brass bg-brass px-7 py-3 font-mono text-[13px] uppercase tracking-[0.2em] text-bone transition-colors hover:bg-transparent hover:text-brass">
+            Submit
+          </button>
+
+          <p class="text-xs leading-relaxed text-coal/50">
+            Morgan Stanley is committed to safeguarding your information:
+            <a href="https://www.morganstanley.com/privacy-pledge.html" target="_blank" rel="noopener" class="underline hover:text-coal">Read Our Privacy Pledge</a>
+          </p>
+        </form>
+
+        <div id="contact-success" class="hidden">
+          <p class="font-display text-xl text-coal">Thank you.</p>
+          <p class="mt-3 text-sm leading-relaxed text-coal/70">A member of our team will be in touch shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bio Modal -->
+  <div id="bio-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-coal/70 px-6 backdrop-blur-sm">
+    <div class="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto bg-white p-8 shadow-2xl lg:p-12">
+      <button
+        type="button"
+        id="bio-modal-close"
+        aria-label="Close bio"
+        class="absolute right-5 top-5 flex h-8 w-8 items-center justify-center text-coal/40 transition-colors hover:text-coal"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4.5 4.5l11 11M15.5 4.5l-11 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-start">
+        <img id="bio-modal-photo" src="" alt="" class="h-32 w-28 shrink-0 object-cover sm:h-40 sm:w-32" />
+        <div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-brass">Meet the Team</p>
+          <h3 id="bio-modal-name" class="mt-3 font-display text-2xl text-coal lg:text-3xl"></h3>
+          <p id="bio-modal-title" class="mt-2 font-mono text-[11px] uppercase tracking-[0.15em] text-coal/50"></p>
+        </div>
+      </div>
+
+      <div id="bio-modal-text" class="mt-8 space-y-4 text-sm leading-relaxed text-coal/70"></div>
+    </div>
+  </div>
+
+  <!-- Team Directory Modal (View All) -->
+  <div id="team-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-coal px-6 py-16 sm:py-20">
+    <div class="relative w-full max-w-5xl pb-10">
+      <button
+        type="button"
+        id="team-modal-close"
+        aria-label="Close team directory"
+        class="absolute -top-2 right-0 flex h-10 w-10 items-center justify-center text-bone/50 transition-colors hover:text-bone"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4.5 4.5l11 11M15.5 4.5l-11 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="text-center">
+        <p class="font-mono text-xs uppercase tracking-[0.35em] text-brass-light">Meet the Team</p>
+        <h2 class="mt-4 font-display text-3xl text-bone lg:text-4xl">The Full Team</h2>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <div class="overflow-hidden">
+            <img src="assets/images/team/biagini.jpg" alt="Portrait of Leo Biagini" class="aspect-[4/5] w-[85%] object-cover" />
+          </div>
+          <h3 class="mt-4 font-display text-xl text-bone">Leo Biagini</h3>
+          <p class="mt-1 font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-brass-light">Managing Director, Wealth Management</p>
+          <p class="mt-3 font-mono text-sm text-fog">Phone: <span class="text-bone">(212) 271-0460</span></p>
+          <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <button type="button" data-contact-trigger="Leo Biagini" class="border border-brass px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone">Contact Me</button>
+            <button type="button" data-bio-trigger="leo-biagini" class="font-mono text-[11px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone">View Bio</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="overflow-hidden">
+            <img src="assets/images/team/etinger.jpg" alt="Portrait of Juan Etinger" class="aspect-[4/5] w-[85%] object-cover" />
+          </div>
+          <h3 class="mt-4 font-display text-xl text-bone">Juan Etinger</h3>
+          <p class="mt-1 font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-brass-light">Managing Director, Wealth Management</p>
+          <p class="mt-3 font-mono text-sm text-fog">Phone: <span class="text-bone">(212) 271-0389</span></p>
+          <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <button type="button" data-contact-trigger="Juan Etinger" class="border border-brass px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone">Contact Me</button>
+            <button type="button" data-bio-trigger="juan-etinger" class="font-mono text-[11px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone">View Bio</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="overflow-hidden">
+            <img src="assets/images/team/palafox.jpg" alt="Portrait of Victor Palafox" class="aspect-[4/5] w-[85%] object-cover" />
+          </div>
+          <h3 class="mt-4 font-display text-xl text-bone">Victor Palafox</h3>
+          <p class="mt-1 font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-brass-light">Managing Director, Wealth Management</p>
+          <p class="mt-3 font-mono text-sm text-fog">Phone: <span class="text-bone">(713) 968-3173</span></p>
+          <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <button type="button" data-contact-trigger="Victor Palafox" class="border border-brass px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone">Contact Me</button>
+            <button type="button" data-bio-trigger="victor-palafox" class="font-mono text-[11px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone">View Bio</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="overflow-hidden">
+            <img src="assets/images/team/villarreal.jpg" alt="Portrait of Rodrigo Morales Villarreal" class="aspect-[4/5] w-[85%] object-cover" />
+          </div>
+          <h3 class="mt-4 font-display text-xl text-bone">Rodrigo Morales Villarreal</h3>
+          <p class="mt-1 font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-brass-light">Executive Director, Wealth Management</p>
+          <p class="mt-3 font-mono text-sm text-fog">Phone: <span class="text-bone">(212) 271-0493</span></p>
+          <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <button type="button" data-contact-trigger="Rodrigo Morales Villarreal" class="border border-brass px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone">Contact Me</button>
+            <button type="button" data-bio-trigger="rodrigo-morales-villarreal" class="font-mono text-[11px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone">View Bio</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="overflow-hidden">
+            <img src="assets/images/team/bengio.jpg" alt="Portrait of Ariel Bengio" class="aspect-[4/5] w-[85%] object-cover" />
+          </div>
+          <h3 class="mt-4 font-display text-xl text-bone">Ariel Bengio</h3>
+          <p class="mt-1 font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-brass-light">Senior Vice President, Wealth Management</p>
+          <p class="mt-3 font-mono text-sm text-fog">Phone: <span class="text-bone">(212) 271-0693</span></p>
+          <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <button type="button" data-contact-trigger="Ariel Bengio" class="border border-brass px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-brass-light transition-colors hover:bg-brass hover:text-bone">Contact Me</button>
+            <button type="button" data-bio-trigger="ariel-bengio" class="font-mono text-[11px] uppercase tracking-[0.12em] text-fog underline underline-offset-4 transition-colors hover:text-bone">View Bio</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".tab-trigger").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const target = trigger.dataset.tab;
+
+        document.querySelectorAll(".tab-trigger").forEach((btn) => {
+          const active = btn === trigger;
+          btn.setAttribute("aria-selected", String(active));
+          btn.classList.toggle("border-brass", active);
+          btn.classList.toggle("text-coal", active);
+          btn.classList.toggle("border-transparent", !active);
+          btn.classList.toggle("text-coal/40", !active);
+        });
+
+        document.querySelectorAll(".tab-panel").forEach((panel) => {
+          panel.classList.toggle("hidden", panel.dataset.panel !== target);
+        });
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    const revealEls = document.querySelectorAll(".reveal");
+    revealEls.forEach((el) => revealObserver.observe(el));
+
+    // Fallback: a fast/instant scroll (anchor jump, Page Down, a hard trackpad
+    // flick) can leap an element past its intersection threshold between two
+    // sampled frames, so the observer never fires for it. Re-check position
+    // directly on scroll so nothing is left permanently stuck invisible.
+    let revealCheckQueued = false;
+    function checkReveals() {
+      revealCheckQueued = false;
+      revealEls.forEach((el) => {
+        if (el.classList.contains("is-visible")) return;
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
+          el.classList.add("is-visible");
+          revealObserver.unobserve(el);
+        }
+      });
+    }
+    function queueRevealCheck() {
+      if (revealCheckQueued) return;
+      revealCheckQueued = true;
+      requestAnimationFrame(checkReveals);
+    }
+    window.addEventListener("scroll", queueRevealCheck, { passive: true });
+    window.addEventListener("resize", queueRevealCheck);
+    checkReveals();
+
+    // Meet the Team carousel (pages of two)
+    const teamPages = Array.from(document.querySelectorAll(".team-page"));
+    const teamDots = Array.from(document.querySelectorAll(".team-dot"));
+    let teamIndex = 0;
+
+    function showTeamPage(index) {
+      teamIndex = (index + teamPages.length) % teamPages.length;
+
+      teamPages.forEach((page, i) => {
+        page.classList.toggle("hidden", i !== teamIndex);
+        page.classList.toggle("flex", i === teamIndex);
+      });
+
+      teamDots.forEach((dot, i) => {
+        dot.classList.toggle("bg-brass", i === teamIndex);
+        dot.classList.toggle("bg-bone/20", i !== teamIndex);
+      });
+    }
+
+    document.getElementById("team-prev").addEventListener("click", () => showTeamPage(teamIndex - 1));
+    document.getElementById("team-next").addEventListener("click", () => showTeamPage(teamIndex + 1));
+    teamDots.forEach((dot) => {
+      dot.addEventListener("click", () => showTeamPage(Number(dot.dataset.index)));
+    });
+    showTeamPage(0);
+
+    // Contact modal
+    const contactModal = document.getElementById("contact-modal");
+    const contactForm = document.getElementById("contact-form");
+    const contactSuccess = document.getElementById("contact-success");
+
+    function openContactModal() {
+      contactForm.reset();
+      contactForm.classList.remove("hidden");
+      contactSuccess.classList.add("hidden");
+      contactModal.classList.remove("hidden");
+      contactModal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeContactModal() {
+      contactModal.classList.add("hidden");
+      contactModal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    document.querySelectorAll("[data-contact-trigger]").forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        openContactModal();
+      });
+    });
+
+    document.getElementById("contact-modal-close").addEventListener("click", closeContactModal);
+    contactModal.addEventListener("click", (e) => {
+      if (e.target === contactModal) closeContactModal();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !contactModal.classList.contains("hidden")) closeContactModal();
+    });
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      contactForm.classList.add("hidden");
+      contactSuccess.classList.remove("hidden");
+    });
+
+    // Contact modal accordions (Investment Needs / Household Assets)
+    function setupModalAccordion(toggleId, panelId, chevronId) {
+      const toggle = document.getElementById(toggleId);
+      const panel = document.getElementById(panelId);
+      const chevron = document.getElementById(chevronId);
+      toggle.addEventListener("click", () => {
+        const isOpen = !panel.classList.contains("hidden");
+        panel.classList.toggle("hidden", isOpen);
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        chevron.style.transform = isOpen ? "" : "rotate(180deg)";
+      });
+    }
+    setupModalAccordion("investment-needs-toggle", "investment-needs-panel", "investment-needs-chevron");
+    setupModalAccordion("household-assets-toggle", "household-assets-panel", "household-assets-chevron");
+
+    // Bio modal
+    const teamBios = {
+      "leo-biagini": {
+        name: "Leo Biagini",
+        title: "Managing Director, Wealth Management",
+        photo: "assets/images/team/biagini.jpg",
+        bio: [
+          "Based in New York, Leo Biagini designs portfolio strategies and defines investment implementation vehicles for international clients. He has more than 19 years of experience in the financial industry, most recently at Credit Suisse, where he spent four years as a Relationship Manager, Managing Director, providing investment advice and portfolio implementation strategies to UHNW clients in Latin America, with a particular focus in the Mexican market. Previously, Leo worked at JPMorgan Private Bank as an investment specialist covering the UHNW segment in Mexico, and prior to that at Citigroup in a similar role. Originally from Argentina, Leo started his career at The Exxel Group, a private equity firm in Argentina. He holds an MBA from the Darden School of Business at the University of Virginia, and a bachelor's degree in industrial engineering from the Universidad de Buenos Aires.",
+          "Leo makes his home in Greenwich, Connecticut with his wife Cecilia, and their three children.",
+        ],
+      },
+      "juan-etinger": {
+        name: "Juan Etinger",
+        title: "Managing Director, Wealth Management",
+        photo: "assets/images/team/etinger.jpg",
+        bio: [
+          "Based in New York City, Juan Etinger is a Managing Director at Morgan Stanley, and a designated Institutional Consulting Director for Graystone, the firm's institutional arm. Juan focuses on designing and managing single and multi-asset portfolios for endowments, foundations and family offices.",
+          "Before joining Morgan Stanley, Juan led the Outsourced CIO and Endowments & Foundations Group businesses for JPMorgan globally, with 350 client relationships and $35bn in AUM across the US, Europe and Latin America. Previously, he was Senior Portfolio Manager managing JPMorgan's $12 billion suite of global multi-asset investment solutions, and served on the investment team for the JPMorgan Access UCITS Funds. Juan holds an MBA from the University of Chicago Booth School of Business, and a bachelor's and master's degree in industrial engineering from the University of Buenos Aires. He lives in Rye, New York with his wife and three children.",
+        ],
+      },
+      "victor-palafox": {
+        name: "Victor Palafox",
+        title: "Managing Director, Wealth Management",
+        photo: "assets/images/team/palafox.jpg",
+        bio: [
+          "Based in Houston, Victor Palafox advises an exclusive clientele of prominent Mexican families in the management of their assets. Victor brings over 20 years of wealth management and fixed income trading experience to the service of his clients.",
+          "Prior to joining Morgan Stanley, Victor served as a Private Banker and Managing Director at Credit Suisse. Previously he worked in a similar position at JPMorgan Private Bank, heading the Houston office for more than 8 years, and prior to that worked at Banamex on the proprietary emerging markets fixed income desk. Victor is a graduate of the School of Business & Economics of the Universidad Anáhuac (Norte) of the State of Mexico. He resides in Houston, Texas with his wife, April, and their six children.",
+        ],
+      },
+      "rodrigo-morales-villarreal": {
+        name: "Rodrigo Morales Villarreal",
+        title: "Executive Director, Wealth Management",
+        photo: "assets/images/team/villarreal.jpg",
+        bio: [
+          "Rodrigo Morales is an investment professional at Morgan Stanley Private Wealth Management. Rodrigo covers the UHNW segment in Mexico and is responsible for providing investment advice and managing clients' portfolios.",
+          "Prior to joining Morgan Stanley, Rodrigo accumulated more than 10 years of experience managing client portfolios at Credit Suisse and JPMorgan's Private Bank. Rodrigo holds an Executive MBA from Columbia University's Business School in New York and a bachelor's degree in economics with honors from ITESM (Tec de Monterrey). He also holds the CERTIFIED PORTFOLIO MANAGER™ designation from the Academy of Certified Portfolio Managers and the Morgan Stanley Family Wealth Director designation.",
+        ],
+      },
+      "ariel-bengio": {
+        name: "Ariel Bengio",
+        title: "Senior Vice President, Wealth Management",
+        photo: "assets/images/team/bengio.jpg",
+        bio: [
+          "Based in Miami, Ariel Bengio is a Financial Advisor providing portfolio management services to UHNW families, corporations, and endowments & foundations. Prior to joining Morgan Stanley, Ariel was at J.P. Morgan Investment Management, where he supported external asset managers in their fund selection and portfolio construction processes. Prior to that, he was a Global Investments Analyst at J.P. Morgan Private Bank covering HNW clients in Argentina and Chile, and spent his summers at Eton Park Capital as a Financial Analyst. Ariel holds an MBA from Columbia Business School and a bachelor's degree in economics and international relations from Boston University.",
+          "Ariel is originally from Madrid, Spain, and lives in Miami with his wife. In his free time, he enjoys playing soccer and tennis. He is also a trustee at Congregation Shearith Israel of NY and Co-Founder and Treasurer of their Young Professional Group.",
+        ],
+      },
+    };
+
+    const bioModal = document.getElementById("bio-modal");
+    const bioModalPhoto = document.getElementById("bio-modal-photo");
+    const bioModalName = document.getElementById("bio-modal-name");
+    const bioModalTitle = document.getElementById("bio-modal-title");
+    const bioModalText = document.getElementById("bio-modal-text");
+
+    function openBioModal(id) {
+      const person = teamBios[id];
+      if (!person) return;
+
+      bioModalPhoto.src = person.photo;
+      bioModalPhoto.alt = `Portrait of ${person.name}`;
+      bioModalName.textContent = person.name;
+      bioModalTitle.textContent = person.title;
+      bioModalText.innerHTML = "";
+      person.bio.forEach((paragraph) => {
+        const p = document.createElement("p");
+        p.textContent = paragraph;
+        bioModalText.appendChild(p);
+      });
+
+      bioModal.classList.remove("hidden");
+      bioModal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeBioModal() {
+      bioModal.classList.add("hidden");
+      bioModal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    document.querySelectorAll("[data-bio-trigger]").forEach((trigger) => {
+      trigger.addEventListener("click", () => openBioModal(trigger.dataset.bioTrigger));
+    });
+
+    document.getElementById("bio-modal-close").addEventListener("click", closeBioModal);
+    bioModal.addEventListener("click", (e) => {
+      if (e.target === bioModal) closeBioModal();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !bioModal.classList.contains("hidden")) closeBioModal();
+    });
+
+    // Team directory modal (View All)
+    const teamModal = document.getElementById("team-modal");
+
+    function openTeamModal() {
+      teamModal.classList.remove("hidden");
+      teamModal.classList.add("flex");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeTeamModal() {
+      teamModal.classList.add("hidden");
+      teamModal.classList.remove("flex");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    document.getElementById("team-view-all").addEventListener("click", openTeamModal);
+    document.getElementById("team-modal-close").addEventListener("click", closeTeamModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !teamModal.classList.contains("hidden")) closeTeamModal();
+    });
+
+    // Awards and Recognition carousel
+    const awardSlides = Array.from(document.querySelectorAll(".award-slide"));
+    const awardCurrent = document.getElementById("award-current");
+    let awardIndex = 0;
+
+    function showAward(index) {
+      awardIndex = (index + awardSlides.length) % awardSlides.length;
+      awardSlides.forEach((slide, i) => {
+        slide.classList.toggle("hidden", i !== awardIndex);
+        slide.classList.toggle("flex", i === awardIndex);
+      });
+      awardCurrent.textContent = awardIndex + 1;
+    }
+
+    document.getElementById("award-prev").addEventListener("click", () => showAward(awardIndex - 1));
+    document.getElementById("award-next").addEventListener("click", () => showAward(awardIndex + 1));
+    showAward(0);
+
+    // Desktop "About" submenu (Section 2: Navbar Sub Menu)
+    const aboutMenuToggle = document.getElementById("about-menu-toggle");
+    const aboutMenu = document.getElementById("about-menu");
+    const aboutMenuChevron = document.getElementById("about-menu-chevron");
+
+    function closeAboutMenu() {
+      aboutMenu.classList.add("hidden");
+      aboutMenuToggle.setAttribute("aria-expanded", "false");
+      aboutMenuChevron.style.transform = "";
+    }
+
+    aboutMenuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !aboutMenu.classList.contains("hidden");
+      if (isOpen) {
+        closeAboutMenu();
+      } else {
+        aboutMenu.classList.remove("hidden");
+        aboutMenuToggle.setAttribute("aria-expanded", "true");
+        aboutMenuChevron.style.transform = "rotate(180deg)";
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!aboutMenu.classList.contains("hidden") && !aboutMenu.contains(e.target) && e.target !== aboutMenuToggle) {
+        closeAboutMenu();
+      }
+    });
+
+    aboutMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeAboutMenu);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeAboutMenu();
+    });
+
+    // Mobile menu (hamburger)
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuIconOpen = document.getElementById("mobile-menu-icon-open");
+    const mobileMenuIconClose = document.getElementById("mobile-menu-icon-close");
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add("hidden");
+      mobileMenuToggle.setAttribute("aria-expanded", "false");
+      mobileMenuIconOpen.classList.remove("hidden");
+      mobileMenuIconClose.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    mobileMenuToggle.addEventListener("click", () => {
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        mobileMenu.classList.remove("hidden");
+        mobileMenuToggle.setAttribute("aria-expanded", "true");
+        mobileMenuIconOpen.classList.add("hidden");
+        mobileMenuIconClose.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobileMenu();
+    });
+
+    // Mobile "About" submenu
+    const mobileAboutToggle = document.getElementById("mobile-about-toggle");
+    const mobileAboutSubmenu = document.getElementById("mobile-about-submenu");
+    const mobileAboutChevron = document.getElementById("mobile-about-chevron");
+
+    mobileAboutToggle.addEventListener("click", () => {
+      const isOpen = !mobileAboutSubmenu.classList.contains("hidden");
+      mobileAboutSubmenu.classList.toggle("hidden", isOpen);
+      mobileAboutToggle.setAttribute("aria-expanded", String(!isOpen));
+      mobileAboutChevron.style.transform = isOpen ? "" : "rotate(180deg)";
+    });
+  </script>
+
+</body>
+</html>
